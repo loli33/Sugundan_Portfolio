@@ -29,6 +29,25 @@
 .ti-volume:before {
 	content: "\e601";
 }
+
+.ti-panel:before {
+    content: "\e62f";  /* Control panel icon */
+}
+
+
+.ti-industry:before {
+    content: "\e675";  /* package = industry symbol */
+}
+
+.ti-automation:before {
+    content: "\e60f";  /* gear icon from Themify */
+}
+
+.ti-robotic:before {
+    content: "\e68e";  /* shuffle/process flow glyph */
+}
+
+
 .ti-user:before {
 	content: "\e602";
 }
