@@ -11295,16 +11295,14 @@ p {
      object-fit: cover;
 }
 
-.blog-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+.blog-card .content-holder {
+  padding: 30px 20px 30px 30px;
 }
 
-.blog-card {
-  border: 1px solid #dee2e6;
-  display: flex;
-  flex-direction: column;
+.blog-card .content-holder .title {
+  font-weight: 500;
+  font-size: 25px;
+  opacity: .8;
 }
 
 .blog-card .content-holder .post-details {
