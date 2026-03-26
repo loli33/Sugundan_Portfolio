@@ -11689,31 +11689,43 @@ pre .code {
 }
 
 /* ===== Chat Hint ===== */
+/* ===== Chat Hint Bubble ===== */
 #chatHint {
   position: fixed;
-  bottom: 100px;
-  right: 20px;
-  background: #dc3545;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 20px;
+  bottom: 95px;
+  right: 90px; /* shift left so it points to button */
+  background: #ffffff;
+  color: #333;
+  padding: 10px 14px;
+  border-radius: 12px;
   font-size: 14px;
   display: none;
   z-index: 99999;
-  animation: bounce 1s infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: fadeInUp 0.5s ease;
 }
 
+/* Sharp pointer triangle */
 #chatHint::after {
   content: "";
   position: absolute;
-  bottom: -8px;
-  right: 20px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #dc3545 transparent transparent transparent;
+  bottom: 10px;
+  right: -10px; /* points toward button */
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white; /* same as bubble bg */
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+/* Smooth animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
