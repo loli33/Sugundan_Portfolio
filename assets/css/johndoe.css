@@ -11692,7 +11692,7 @@ pre .code {
 #chatHint {
   position: fixed;
   bottom: 100px;
-  right: 85px; /* adjust based on button size */
+  right: 100px; /* adjust based on button size */
   background: #dc3545;
   color: white;
   padding: 10px 14px;
