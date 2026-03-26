@@ -144,7 +144,7 @@ function shakeChat() {
   const btn = document.getElementById("chatBtn");
   if (btn) {
     btn.classList.add("shake");
-    setTimeout(() => btn.classList.remove("shake"), 600);
+    setTimeout(() => btn.classList.remove("shake"), 3000);
   }
 }
 
