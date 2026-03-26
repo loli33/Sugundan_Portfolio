@@ -136,24 +136,3 @@ function initMap() {
       ]
     });
 }
-
-// Chat toggle
-document.getElementById("chatBtn").onclick = function () {
-  let box = document.getElementById("chatBox");
-  box.style.display = box.style.display === "block" ? "none" : "block";
-
-  let hint = document.getElementById("chatHint");
-  if (hint) hint.style.display = "none";
-};
-
-// Show hint after 10 sec
-setTimeout(() => {
-  const hint = document.getElementById("chatHint");
-  if (hint) {
-    hint.style.display = "block";
-
-    setTimeout(() => {
-      hint.style.display = "none";
-    }, 6000);
-  }
-}, 10000);

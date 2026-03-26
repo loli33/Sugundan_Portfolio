@@ -11687,31 +11687,3 @@ pre .code {
   right: 20px;
   z-index: 99999;
 }
-
-/* ===== Chat Hint Bubble ===== */
-#chatHint {
-  position: fixed;
-  bottom: 100px;
-  right: 100px; /* adjust based on button size */
-  background: #dc3545;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-size: 14px;
-  display: none;
-  z-index: 99999;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Arrow pointing to button */
-#chatHint::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  right: 15px; /* move arrow horizontally */
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #dc3545;
-}
