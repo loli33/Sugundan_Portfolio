@@ -11688,7 +11688,6 @@ pre .code {
   z-index: 99999;
 }
 
-/* ===== Chat Hint ===== */
 /* ===== Chat Hint Bubble ===== */
 #chatHint {
   position: fixed;
