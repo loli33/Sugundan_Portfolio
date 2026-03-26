@@ -1,17 +1,4 @@
 @charset "UTF-8";
-/*!
-=========================================================
-* JohnDoe Landing page
-=========================================================
-
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
 :root {
   --blue: #79A9F5;
@@ -11683,4 +11670,50 @@ pre .code {
   background: #F85C70;
   display: block;
   margin-top: 10px;
+}
+/* ===== Chat Button ===== */
+#chatBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+/* ===== Chat Box ===== */
+#chatBox {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 99999;
+}
+
+/* ===== Chat Hint ===== */
+#chatHint {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: none;
+  z-index: 99999;
+  animation: bounce 1s infinite;
+}
+
+#chatHint::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 20px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #dc3545 transparent transparent transparent;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
