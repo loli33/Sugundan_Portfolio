@@ -136,3 +136,23 @@ function initMap() {
       ]
     });
 }
+
+// ===== Chat Button Shake Logic =====
+let shakeInterval = setInterval(shakeChat, 15000);
+
+function shakeChat() {
+  const btn = document.getElementById("chatBtn");
+  if (btn) {
+    btn.classList.add("shake");
+    setTimeout(() => btn.classList.remove("shake"), 600);
+  }
+}
+
+// ===== Chat Button Click =====
+document.getElementById("chatBtn").onclick = function () {
+  let box = document.getElementById("chatBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+
+  // Stop shaking after user interacts
+  clearInterval(shakeInterval);
+};
