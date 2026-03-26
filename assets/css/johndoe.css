@@ -11691,40 +11691,27 @@ pre .code {
 /* ===== Chat Hint Bubble ===== */
 #chatHint {
   position: fixed;
-  bottom: 95px;
-  right: 90px; /* shift left so it points to button */
-  background: #ffffff;
-  color: #333;
+  bottom: 100px;
+  right: 85px; /* adjust based on button size */
+  background: #dc3545;
+  color: white;
   padding: 10px 14px;
   border-radius: 12px;
   font-size: 14px;
   display: none;
   z-index: 99999;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  animation: fadeInUp 0.5s ease;
 }
 
-/* Sharp pointer triangle */
+/* Arrow pointing to button */
 #chatHint::after {
   content: "";
   position: absolute;
-  bottom: 10px;
-  right: -10px; /* points toward button */
+  bottom: -8px;
+  right: 15px; /* move arrow horizontally */
   width: 0;
   height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid white; /* same as bubble bg */
-}
-
-/* Smooth animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #dc3545;
 }
